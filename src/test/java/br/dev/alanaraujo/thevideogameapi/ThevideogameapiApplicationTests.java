@@ -1,13 +1,13 @@
 package br.dev.alanaraujo.thevideogameapi;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ThevideogameapiApplicationTests {
+public class ThevideogameapiApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 }
