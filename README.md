@@ -4,15 +4,15 @@ This is a personal API application, providing information about video game indus
 
 # Getting started:
 
-##Download
+## Download
 
 ```
 git clone https://github.com/alangaraujo/thevideogameapi.git
 ```
 
-##Build:
+## Build:
 
-###Enter the project directory and run:
+### Enter the project directory and run:
 
 ```
 Linux
