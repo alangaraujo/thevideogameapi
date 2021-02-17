@@ -1,6 +1,6 @@
 package br.dev.alanaraujo.thevideogameapi.api.controller;
 
-import static br.dev.alanaraujo.thevideogameapi.api.mapper.CompanyMapper.companyDto;
+import static br.dev.alanaraujo.thevideogameapi.api.mapper.CompanyMapper.companyToDto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ public class CompanyController {
 		List<CompanyDto> companyDto = new ArrayList<>();
 		List<Company> companies = companyService.findAll();
 		
-		companies.forEach(value -> companyDto.add(companyDto(value)));
+		companies.forEach(value -> companyDto.add(companyToDto(value)));
 		
 		return ResponseEntity.ok(companyDto);
 	}

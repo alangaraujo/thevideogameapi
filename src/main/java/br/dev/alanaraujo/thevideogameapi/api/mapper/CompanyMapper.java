@@ -9,7 +9,11 @@ public class CompanyMapper {
 
 	private static final ModelMapper MAPPER = new ModelMapper();
 	
-	public static CompanyDto companyDto(Company company) {
+	public static CompanyDto companyToDto(Company company) {
 		return MAPPER.map(company, CompanyDto.class);
+	}
+	
+	public static Company dtoToCompany(CompanyDto companyDto) {
+		return MAPPER.map(companyDto, Company.class);
 	}
 }
