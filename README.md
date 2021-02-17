@@ -1,5 +1,7 @@
 # The VideoGame API
 
+Work In Progress - Project not functional yet!
+
 This is a personal API application, providing information about video game industry and its trivia.
 
 # Getting started:
