@@ -1,9 +1,10 @@
 package br.dev.alanaraujo.thevideogameapi.api.controller;
 
+import static br.dev.alanaraujo.thevideogameapi.api.mapper.CompanyMapper.companyDto;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,19 +19,16 @@ import br.dev.alanaraujo.thevideogameapi.domain.service.CompanyService;
 @RequestMapping(path = "/company")
 public class CompanyController {
 	
-	private static final ModelMapper MAPPER = new ModelMapper();
-	
 	@Autowired
 	private CompanyService companyService;
 	
-	@SuppressWarnings("rawtypes")
 	@GetMapping
-	public ResponseEntity findAll() {
+	public ResponseEntity<List<CompanyDto>> findAll() {
 		
 		List<CompanyDto> companyDto = new ArrayList<>();
 		List<Company> companies = companyService.findAll();
 		
-		companies.forEach(value -> companyDto.add(MAPPER.map(value, CompanyDto.class)));
+		companies.forEach(value -> companyDto.add(companyDto(value)));
 		
 		return ResponseEntity.ok(companyDto);
 	}
